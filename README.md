@@ -48,4 +48,4 @@ Para satisfacer las reglas de negocio descritas, el diseño de la base de datos 
 | **CONDUCTORES** | VIAJES | 1:N | `FK_VIAJES_CONDUCTORES` | Un chofer opera múltiples viajes de forma secuencial. |
 | **VIAJES** | BOLETOS | 1:N | - | Un viaje genera la venta de múltiples boletos individuales hasta agotar la capacidad del transporte. |
 | **PASAJEROS** | BOLETOS | 1:N | - | Un cliente puede adquirir múltiples boletos para trasladarse en distintas ocasiones. |
-| **Relación Boleto** | PAGO | (1:1) | - | Cada boleto emitido genera un registro obligatorio de cobro referenciado por FK_PAGOS_BOLETOS.
+| **Relación Boleto** | PAGO | (1:1) | `FK_PAGOS_BOLETOS` | Cada boleto emitido genera un registro obligatorio de cobro referenciado por FK_PAGOS_BOLETOS.
