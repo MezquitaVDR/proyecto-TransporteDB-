@@ -1,7 +1,7 @@
 # proyecto-TransporteDB-
 proyecto base de datos tema 10
 
-##1. Definición del Propósito de la Base de Datos
+## 1. Definición del Propósito de la Base de Datos
 
 ¿Qué problema o necesidad resolverá la base de datos?
 
@@ -14,30 +14,30 @@ Control de Capacidad y Evitación de Sobreventa: Detiene la venta de boletos cua
 Trazabilidad General y Auditoría Histórica: Registra el historial exacto de traslados y transacciones financieras (conectando pasajeros, boletos, pagos y viajes). Además, incorpora infraestructura de seguridad mediante tablas de auditoría de estados (AUDITORIA_VIAJES) y registro de excepciones (LOG_ERRORES).
 
 
-##2. Modelo Conceptual y Relacional
+## 2. Modelo Conceptual y Relacional
 ¿Qué entidades y relaciones se deben modelar?
 
 Para satisfacer las reglas de negocio descritas, el diseño de la base de datos se compone de las siguientes entidades organizadas jerárquicamente:
 
-###A. Entidades Maestras (Catálogos Base)
+### A. Entidades Maestras (Catálogos Base)
 
   RUTAS: Define los trayectos autorizados origen-destino y su distancia en kilómetros.
 
   VEHICULOS: Registra la flota operativa portando atributos clave como la placa, el modelo y la capacidad total de pasajeros.
 
-   CONDUCTORES: Almacena la información del personal de manejo y el estado de su licencia de conducir.
+  CONDUCTORES: Almacena la información del personal de manejo y el estado de su licencia de conducir.
 
-   PASAJEROS: Identifica a los usuarios del servicio mediante su respectivo Documento Único de Identidad (DUI).
+  PASAJEROS: Identifica a los usuarios del servicio mediante su respectivo Documento Único de Identidad (DUI).
 
-###B. Entidades Operativas y de Control
+### B. Entidades Operativas y de Control
 
   VIAJES: Entidad pivote que consolida la planificación del servicio, asociando una ruta, un vehículo y un conductor a una fecha y hora de salida específicas.
 
   BOLETOS: Controla la reservación individual de un espacio físico dentro de un viaje para un pasajero determinado.
 
-   PAGOS: Registra el detalle contable y el método de pago asociado a la emisión de cada boleto.
+  PAGOS: Registra el detalle contable y el método de pago asociado a la emisión de cada boleto.
 
-###C. Relaciones y Restricciones del Modelo
+### C. Relaciones y Restricciones del Modelo
 
    Relación Ruta - Viaje (1:N): Una ruta fija puede ser asignada a múltiples viajes programados cronológicamente.
 
